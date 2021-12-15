@@ -1,0 +1,132 @@
+
+Escribir una funci�n que calcule A elevado a B, siendo A y B n�meros enteros.<html>
+<head> <title> Funciones: </title> </head>
+<body>
+<font face="Arial, Helvetica, sans-serif">
+
+
+<?php
+   $A= 5;
+   $B= 4;
+
+   print "A=$A B=$B <br>";
+   $C=Eleva($A,$B);
+   print "A elevado a B es $C<br>";
+      
+?>
+            
+<?php
+function Eleva($A,$B){
+   $C=$A;
+   for ($i=1;$i<$B;$i++){
+        $C=$C*$A;
+   }
+   return $C;
+}
+?>
+
+</font>
+</body>
+</html>
+------------------------------------------------------------------------------------------------------------------
+
+<html>
+<head>
+<title>Raiz cuadrada </title>
+</head>
+
+<body>
+<?php
+  echo "Raiz cuadrada del numero 1720 es: " .sqrt(1720) . "<br>";
+?>
+
+</body>
+</html>
+
+---------------------------------------------------------------------------------------------------------------------
+Escribir una funci�n que descomponga y escriba los factores primos
+<html>
+<body>
+<?php
+  $N=1528;
+  factor($N);
+?>
+</body>
+</html>
+
+<?php
+function factor ($B){
+	print "<b>$B</b>";
+	$i=2;
+	while ($i<=$B){
+		if ($B%$i==0){
+			$B=$B/$i;
+			print "<br>$i";
+	                $i=2;
+		}else{
+			$i++;
+		}
+	}
+}
+?>
+
+--------------------------------------------------------------------------------------------------------------
+
+<html>
+<head>
+<title>Funciones definidas</title>
+</head>
+
+<body>
+<?php
+ function datosUsuario(){
+$user = ['Mayerly', 'Salamanca', 'msalamanca694@gmail.com', 'aprendiz'];
+
+foreach ($user as $datos) {
+      echo $datos . ' | ';
+
+        }
+}
+datosUsuario();
+?>
+
+</body>
+</html>
+
+--------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argumentos de funciones</title>
+</head>
+<body>
+    <h1> Pasar argumentos por valor</h1>
+<?php
+$array = ['perro', 'gato', 'avestruz'];
+function mostrarAnimales($animales){
+{
+    foreach ($animales as $animal){
+        echo $animal . "<br>";
+    }
+}
+}
+mostrarAnimales($array);
+?>
+</body>
+</html>
+
+--------------------------------------------------------------------------------------------------------------------
+
+<?php
+function cuadrado($núm)
+{
+    return $núm * $núm;
+}
+echo cuadrado(4);   // imprime '16'.
+?>
+
+
